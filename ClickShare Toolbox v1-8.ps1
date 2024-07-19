@@ -70,7 +70,7 @@ $global:headers = New-Object "System.Collections.Generic.Dictionary[[String],[St
 $global:headers.Add("Authorization",$authheader)
 }
 
-#Ignores self-signed SSL certificates to prevrent warnings, errors, and invove-webrequest from doing its job.
+#Ignores self-signed SSL certificates to prevent warnings, errors, and invoke-webrequest from doing its job.
 function ignore-certs{
 if ("TrustAllCertsPolicy" -as [type]) {return}
 add-type @"
